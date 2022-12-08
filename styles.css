@@ -1,17 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
 * {
+  box-sizing: border-box;
+
+}
+/*css for navbar*/
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 
+.neons {
+   margin-top: 6rem;
+   text-align: center;
+}
+
+.neons h1 {
+  font-size: 5rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@media (max-width: 740px){
+  .neons h1{
+    font-size: 4rem;
+    margin-bottom: 10%;
+  }
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
 
 :root {
 /* Color of the background */
   --bodycolor: #efefef;
 
 /* Width of the columsn */
---boxwidth: 340px;
-/* Height of the rows */
---boxheight: 520px;
+--boxwidth: 240px;   //340
+/* Height of the rows  520*/
+--boxheight: 460px;
 
 /* Width of the bubble (it's always a circle, width and height are the same) */
  --icon-box-dimensions: 250px;
@@ -34,11 +75,6 @@
   --btntext-background : rgba(255,255,255,0.1);
   --btntext-color : #eee;
 }
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
 
 body {
   font-family: 'Lato', sans-serif;
@@ -46,21 +82,20 @@ body {
   background: var(--bodycolor);
   /* background-color: #330867; */
   background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
- 
 }
 
 
 /* grid-container */
 .container {
-  margin: 10px;
-  padding: 2%;
+  margin: 4 auto;
+  padding: 3%;
   max-width: 100%;
   height: auto;
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--boxwidth), 1fr));
   grid-auto-rows: minmax(var(--boxheight), 1fr);
-  grid-gap: 30px;
+  grid-gap: 70px;
   justify-content: center;
   box-sizing: border-box;
 }
@@ -73,13 +108,13 @@ body {
   box-sizing: border-box;
   background: #efefef;
   transition: 0.5s;
-  margin: 10px;
-  border-radius: 5%;
+  height: 500px;
+
 }
 
 .box:hover {
   cursor: pointer;
-  	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transform: translateY(-4px);
 }
@@ -94,54 +129,6 @@ position: absolute;
   transition: 0.35s cubic-bezier(.15,.78,.46,.8);
   z-index: 1;
   
-}
-
-@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
-
-.heading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Baloo Thambi', cursive;
-  font-size: 7rem;
-  height: 200px;
-}
-
-.heading > span{
-  text-transform: uppercase;
-  animation: glow 2s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% {
-    color: #FFF;
-    text-shadow: 0 0 10px #0652DD, 0 0 50px #0652DD, 0 0 100px #0652DD;
-  }
-  
-  10%, 90% {
-    color: #111;
-    text-shadow: none;
-  }
-}
-
-.heading > span:nth-child(2) {
-	animation-delay: 0.25s;
-}
-
-.heading > span:nth-child(3) {
-	animation-delay: 0.5s;
-}
-
-.heading > span:nth-child(4) {
-	animation-delay: 0.75s;
-}
-
-.heading > span:nth-child(5) {
-	animation-delay: 1s;
-}
-
-.heading > span:nth-child(6) {
-	animation-delay: 1.25s;
 }
 
 .img-box img {
@@ -227,7 +214,8 @@ opacity: 1;
   opacity:1;
   bottom: -50%;
   width: 100%;
-  height: 60%;
+/*  height: 60%;*/
+  height:70%;
   padding: 3em;
   font-size: 0.8em;
   text-align: center;
@@ -235,7 +223,7 @@ opacity: 1;
   transition: bottom 0.35s cubic-bezier(.15,.78,.46,.8), transform 0.3s;
   color: #000;
   opacity: 0;
-  
+  top: 40%;
 }
 
 .content h2 {
@@ -266,7 +254,7 @@ opacity: 1;
 @media screen and (min-width:600px) {
   
   :root {
---boxheight: 520px;
+--boxheight: 500px; /*500px*/
   }
   
 }
@@ -335,8 +323,7 @@ button {
 }
 
 
-
-
+/*navbar*/
 
 
 .containerr{
@@ -381,6 +368,7 @@ nav{
 	align-items: center;
 	right: -200vw;
   z-index: 9999;
+  top: 0;
 }
 
 nav ul {

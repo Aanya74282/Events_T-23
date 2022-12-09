@@ -267,7 +267,7 @@ opacity: 1;
 .box {
     width: 282px;
     height: 442px;
-    left: 10%;
+    left: 40px;
 }
 }
 @media (max-width: 740px){

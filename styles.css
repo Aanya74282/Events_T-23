@@ -251,13 +251,31 @@ opacity: 1;
   
 }  
 
-@media screen and (min-width:600px) {
+
+  @media screen and (min-width:600px) {
   
   :root {
---boxheight: 500px; /*500px*/
+--boxheight: 300px;
+ /*500px*/
   }
-  
 }
+
+
+
+
+@media (max-width: 740px){
+.box {
+    width: 282px;
+    height: 442px;
+    left: 15%;
+}
+}
+@media (max-width: 740px){
+.content{
+    font-size:0.8em;
+    line-height:1;
+
+}}
 
 .content.frame {
   width: 90%;

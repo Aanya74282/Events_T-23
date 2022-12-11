@@ -254,8 +254,7 @@ opacity: 1;
   
 }  
 
-@media screen and (min-width:360px and max-width:450px) {
-  
+@media screen and (min-device-width: 360px) and (max-device-width: 450px) { 
   :root {
 --boxheight:150px; 
 --boxwidth: 120px;
@@ -433,7 +432,8 @@ nav .close div::after{
 	width: 30px;
 	height: 4px;
 	background: #fff;
-	transition: background .5s ease;
+/* 	transition: background .5s ease; */
+	 transition: background-color 0.5s ease;
 }
 nav .close div::before{
 	transform: rotate(-45deg);

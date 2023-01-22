@@ -373,8 +373,8 @@ nav{
 	position: absolute;
 	width: 100%;
 	height: 30px;
-	background: rgba(27, 13, 183, 0.5);
-  /* background-color: transparent; */
+	background-color: rgba(0, 0, 0, 0.863);
+	backdrop-filter: blur(8px);
 	display: flex;
 	justify-content: center;
 	align-items: center;

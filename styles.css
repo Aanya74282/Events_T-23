@@ -183,6 +183,12 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 427px){
+ .container{
+  padding:9%;
+ }
+}
+
 /* this is the card selecter */
 .box {
   position: relative;
@@ -308,7 +314,13 @@ position: absolute;
   transition: bottom 0.35s cubic-bezier(.15,.78,.46,.8), transform 0.3s;
   color: #000;
   opacity: 0;
-  top: 40%;
+  top: 43%;
+}
+
+@media (max-width: 427px){
+ .content{
+    font-size: 0.67em;
+ }
 }
 
 .content h2 {
@@ -337,10 +349,34 @@ position: absolute;
   
 }  
 
+@media screen and (max-device-width: 323px) { 
+  :root {
+ 
+--boxwidth: 110px;
+
+  }
+  
+    .content{
+    font-size: 0.62em;
+ }
+
+  
+}
+
+
 @media screen and (min-device-width: 360px) and (max-device-width: 450px) { 
   :root {
 --boxheight:150px; 
 --boxwidth: 120px;
+
+  }
+  
+}
+
+@media screen and (min-device-width: 423px) and (max-device-width: 658px) { 
+  :root {
+--boxheight:150px; 
+--boxwidth: 200px;
 
   }
   
@@ -417,11 +453,16 @@ button {
 .containerr{
 	cursor: pointer;
 	position: absolute;
-	top: 5%;
+	top: 3%; /* 5%*/
 	right: 5%;
 	width: 30px;
 	height: 20px;
 }
+/*@media (max-width: 426px){
+ .containerr{
+  top:2%;
+ }
+}*/
 
 .bars{
 	width: 30px;

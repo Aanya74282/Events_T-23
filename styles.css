@@ -502,7 +502,7 @@ nav{
 	justify-content: center;
 	align-items: center;
 	right: -200vw;
-  z-index: 9999;
+  z-index: 2;
   top: 0;
 }
 
@@ -585,4 +585,11 @@ nav .close:hover div::after{
   }
 }
     
-
+@media (max-width: 600px){
+  nav{
+    position: fixed;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+  }
+}

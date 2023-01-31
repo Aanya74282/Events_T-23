@@ -34,6 +34,13 @@
   }
 }
 
+@media (max-width: 376px){
+.neons h1 {
+    font-size: 3rem;
+    
+}
+}
+
 @-webkit-keyframes glow {
      from {
       color: #fff;
@@ -585,11 +592,14 @@ nav .close:hover div::after{
   }
 }
     
-@media (max-width: 600px){
-  nav{
+@media (max-width: 769px){
+  /*nav{
     position: fixed;
     overflow: hidden;
     right: 0;
     top: 0;
+  }*/
+  .containerr{
+    top: 1.7%;
   }
 }

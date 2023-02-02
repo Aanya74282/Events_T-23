@@ -4,7 +4,6 @@ const eventsNames = [
   'Aaghaz',
   'Rap Battle',
   'Group Singing-Antra',
-  
   'Solo Singing-Anhad',
   'Lilac Dreams',
   'Slam Poetry',

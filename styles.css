@@ -664,6 +664,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
+    display: none;
     /* color: #eee; */
     background-color: rgba(0, 0, 0, 0.5);
      z-index: 999;
@@ -671,6 +672,20 @@ button {
   }
   
   .card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    width: fit-content;
+    /* margin-left: 30%; */
+    /* margin-right: 30%; */
+    max-width: 745vw;
+}
+  /*.card {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -681,23 +696,40 @@ button {
     border-radius: 10px;
     z-index: 2;
     max-width: 2000px;
-  }
-  .card-header{
+  }*/
+
+.card-header {
     /* font-size: 1.5rem; */
+    display: inline-block;
+    max-width: 80vw;
     margin-bottom: 25px;
-    font-family: 'Mochiy Pop P One'; 
+    font-family: 'Mochiy Pop P One';
     /* padding: 15px 10px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
-  }
+}
+
+
+/*  .card-header{
+    /* font-size: 1.5rem; 
+    margin-bottom: 25px;
+    font-family: 'Mochiy Pop P One'; 
+    /* padding: 15px 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }*/
   .card-header .title {
     font-size: 50px;
     font-weight: bold;
     color: lightskyblue;
-    padding-left: 200px;
+/*    padding-left: 200px;*/
   }
+
+
   
   .card-header .close-button {
     cursor: pointer;

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Sacramento&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -34,8 +34,8 @@
   margin-bottom: 2rem;
   text-align: center;
   text-shadow: #fff;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-family: "Roboto", sans-serif;
   font-family: "Ubuntu", sans-serif;
@@ -492,9 +492,6 @@ button {
 /* navbar */
 
 
-
-
-
 .wrapper2 {
     font-family: "Roboto Slab", serif;
     font-weight: 300;
@@ -651,15 +648,26 @@ button {
     }
   } */
 
+
+
+
+
+
+  /* pop up box */
+
+
   .overlay {
-    display: inline;
+    display: block;
+    block-size: 1000px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    /* color: #eee; */
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+     z-index: 999;
+    /* width: 100%; */
   }
   
   .card {
@@ -667,28 +675,164 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background: black;
     padding: 20px;
+    
     border-radius: 10px;
     z-index: 2;
+    max-width: 2000px;
+  }
+  .card-header{
+    /* font-size: 1.5rem; */
+    margin-bottom: 25px;
+    font-family: 'Mochiy Pop P One'; 
+    /* padding: 15px 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  .card-header .title {
+    font-size: 50px;
+    font-weight: bold;
+    color: lightskyblue;
+    padding-left: 200px;
+  }
+  
+  .card-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 80px;
+    /* font-weight: bold; */
+    color: lightblue;
+  }
+  .card-body{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-body .text{
+    font-family: 'Mochiy Pop P One'; 
+    color: lightblue;
   }
 
-  .register-button{
+  .card-body .a-n2{
     font-weight: 600;
-    color:#382b22 ;
+    font-size: large;
+    /* color: white ; */
     text-transform: uppercase;
-    padding: 1.25em 2em;
-    background: #fff0f0;
-    border: 2px solid  #b18597;
-    border-radius: 0.75em;
+    padding: 1.2em 1.5em; 
+    background: black;
+    border: none;
+   /* border: 2px solid  #b18597; */
+    /* border-radius: 0.75em;
     transform-style: preserve-3d;
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
-    margin-top: 50px;
-    margin-left: 90px;
-    
-
+    margin-top: 50px; */
+    /* margin-left: 90px; */
   }
 
+  
+
+
+.a-n2:hover{
+  background:#F2E34C; color: #000;
+  box-shadow: 0px 0px 10px #26a0da, 0px 0px 40px#26a0da, 0px 0px 80px #26a0da; transition-delay: 0.2s;
+}
+
+
+.a-n2 span:nth-child(1){
+  top: 0px;
+  left: -91%;
+  width: 100%;
+  height: 2px;
+  background: #F2E34C;
+}
+
+.a-n2:hover span:nth-child(1){
+
+  left:0%; 
+  transition: 0.3s; 
+}
+
+
+.a-n2 span:nth-child(3){
+  bottom: 0px;
+  right: -91%;
+  width: 100%;
+  height: 2px;
+  background: #F2E34C;
+}
+
+.a-n2:hover span:nth-child(3){
+
+  right:0%; 
+  transition: 0.3s; 
+}
+
+.a-n2 span:nth-child(2){
+  bottom: -70%;
+  right: 0%;
+  width: 2px;
+  FONT-WEIGHT: 100;
+  background: #F2E34C;
+  height: 100%;
+}
+
+.a-n2:hover span:nth-child(2){
+
+  bottom:0%; 
+  transition: 0.3s; 
+}
+
+
+
+.a-n2 span:nth-child(4){
+  top: -70%;
+  left: 0%;
+  width: 2px;
+  FONT-WEIGHT: 100;
+  background: #F2E34C;
+  height: 100%;
+}
+
+.a-n2:hover span:nth-child(4){
+
+  top:0%; 
+  transition: 0.3s; 
+}
+
+.a-n2 span,.a-n1 span{
+  position: absolute;
+  display: block;
+}
+
+.a-n2{ margin-left: 20px;
+  text-decoration: none; position: relative;  padding: 15px 30px; overflow: hidden; transition: 0.2s all;  color: #fff; text-transform: uppercase; letter-spacing: 4px;
+}
+/* #blur {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, .5); 
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+#blur.active {
+  pointer-events: all;
+  filter: opacity(1);
+} */
+
+/*
   .register-button::before{
     position: absolute;
       content: '';
@@ -724,11 +868,9 @@ button {
   .register-button:active::before{
     box-shadow: 0 0 0 2px #b18597, 0 0  #ffe3e2;
     transform: translate3d(0, 0, -1em);
-  }
+  } 
 
-
-
-
+       
 
 
   .close-button{
@@ -741,8 +883,7 @@ button {
     border-radius: 0.75em;
     transform-style: preserve-3d;
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
-    margin-top: 50px;
-   
+    margin-top: 20px;
     
 
   }
@@ -763,7 +904,6 @@ button {
       transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
   }
 
-
   .close-button:hover{
     background: #ffe9e9;
     transform: translate(0, 0.25em);
@@ -782,4 +922,4 @@ button {
   .close-button:active::before{
     box-shadow: 0 0 0 2px #b18597, 0 0  #ffe3e2;
     transform: translate3d(0, 0, -1em);
-  }
+  } 

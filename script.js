@@ -4,10 +4,13 @@ const eventsNames = [
   'Aaghaz',
   'Rap Battle',
   'Group Singing-Antra',
-  'Urban Thump',
+  
   'Solo Singing-Anhad',
   'Lilac Dreams',
   'Slam Poetry',
+  'Urban Thump',
+  
+  
 ];
 
 const texts = [

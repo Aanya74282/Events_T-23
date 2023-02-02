@@ -1,3 +1,15 @@
+const eventsNames = [
+  'Mr and Ms Taarangana',
+  'Rangmanch',
+  'Aaghaz',
+  'Rap Battle',
+  'Group Singing-Antra',
+  'Urban Thump',
+  'Solo Singing-Anhad',
+  'Lilac Dreams',
+  'Slam Poetry',
+];
+
 const texts = [
   "“Bright strokes of colours will flood the stage as the night begins,setting the tone for a euphoric evening.“<br><br>Mr and Ms Taarangana is a Title Pageant competition for those with glitz and glamour in their soul. If you are the one who can dazzle the audience with your charisma and stage presence, the crown is waiting to be yours.Arm yourselves with ecstatic grace, dazzle us with your thoughts, and win the Event’s high title.",
   "“Monologue is the most honest way to represent human beings.“ <br>-George Saunders.<br><br>The function of an actor is to make the audience imagine that, for the moment, real things are happening to real people. Rangmanch is a mono-acting competition, giving all the budding actors a chance to get on the stage and enthral the audience with their act.",
@@ -12,18 +24,29 @@ const texts = [
 
 const overlay = document.getElementById("overlay");
 const card = document.getElementById("card");
+const title = document.getElementById("title");
 const text = document.getElementById("text");
 const closeButton = document.getElementById("closeButton");
+// const blur = document.getElementById('blur');
+
+// blur.addEventListener('click', () => {
+//   const overlay = document.querySelectorAll('.overlay.active')
+//   overlay.forEach(overlay => {
+//     closeButton(overlay)
+//   })
+// })
 
 for (let i = 0; i < 9; i++) {
   const button = document.getElementById("button" + (i + 1));
   
   button.addEventListener("click", function() {
     overlay.style.display = "block";
+    title.innerHTML = eventsNames[i];
     text.innerHTML = texts[i];
   });
 }
 
 closeButton.addEventListener("click", function() {
   overlay.style.display = "none";
-});
+}
+);

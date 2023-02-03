@@ -29,6 +29,8 @@ const card = document.getElementById("card");
 const title = document.getElementById("title");
 const text = document.getElementById("text");
 const closeButton = document.getElementById("closeButton");
+const containerr=document.getElementById("mainn")
+
 // const blur = document.getElementById('blur');
 
 // blur.addEventListener('click', () => {
@@ -37,16 +39,28 @@ const closeButton = document.getElementById("closeButton");
 //     closeButton(overlay)
 //   })
 // })
+function toggle(){
+    var blur= document.getElementById("blur");
+    blur.classList.toggle('active');
+    var popup=document.getElementById('overlay')
+     popup.classList.toggle('active');
+  }
 
 for (let i = 0; i < 9; i++) {
   const button = document.getElementById("button" + (i + 1));
   
+
+
   button.addEventListener("click", function() {
+     toggle();
     overlay.style.display = "block";
     title.innerHTML = eventsNames[i];
     title.style.textAlign="center";
     text.innerHTML = texts[i];
+   
+
   });
+  
 
   if (window.matchMedia("(max-width: 760px)").matches) {
     text.style.fontSize = "12px";
@@ -74,6 +88,9 @@ for (let i = 0; i < 9; i++) {
 }
 
 closeButton.addEventListener("click", function() {
-  overlay.style.display = "none";
+  //   var blur= document.getElementById("blur");
+  // overlay.style.display = "none";
+  // blur.classList.remove("active");
+  toggle();
 }
 );
